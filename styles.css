@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.button, .card-text, card-title{
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  padding: 30px;
+}
+
+.card{
+  width: 20rem;
+  border-top-right-radius: 10px 10px;
+  border-top-left-radius: 50px 50px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 50px 50px;
+}
+
+.img{
+   border-top-right-radius: 5px 5px;
+  border-top-left-radius: 50px 50px;
+}
+
+.button{
+  transition: 0.8s ease;
+  background-color: #0082FE;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 2rem;
+}
+
+.button:hover{
+  transition: 0.8s ease;
+  border-color: #0082FE;
+  background-color: #fff;
+  color: #0082FE;
+  font-size: 14px;
+}
+
+body{
+  background-color:#373887;
+  font-family: 'JetBrains Mono', 'Helvetica Neue';
+}
+
+/* ----------------- */
+/* Fifth */
+
+h1{
+  font-family: 'JetBrains Mono', 'Helvetica Neue';
+}
+
+h1.fifth {
+	font-weight: 400;
+	text-shadow: 
+		3px 3px 0
+		dodgerblue;
+	transition: all 0.2s ease;
+}
+
+h1.fifth:hover {
+	text-shadow: 0 0 0 dodgerblue;
+}
+
+/* ----------------- */
+/* Sixth */
+
+h1.sixth { position: relative; }
+
+h1.sixth:before,
+h1.sixth:after {
+	content: '[';
+	display: inline-block;
+	position: relative;
+	top: 1px;
+	height: 100%;
+	font-size: 1.25em;
+	color: tomato;
+	
+	transition: all 0.5s ease;
+}
+
+h1.sixth:after { content: ']'; }
+
+h1.sixth:hover:before { 
+	transform: translateX(-5px);
+}
+
+h1.sixth:hover:after { 
+	transform: translateX(5px);
+}

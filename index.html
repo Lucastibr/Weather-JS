@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <title>Weather JS</title>
+</head>
+
+<body>
+    <h1 class="text-center mt-2 sixth">Weather JS</h1>
+
+    <div class="d-flex justify-content-center mt-5">
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1700&q=80"
+                class="card-img-top img">
+
+            <div class="card-body bg-dark">
+
+                <center>
+                    <h3 class="card-title text-white" id="title">
+                    </h3>
+                </center>
+
+                <h1 class="card-text text-end text-white" id="details"></h1>
+
+                <small class="text-muted text-white" id="otherDetails"></small>
+                <center><button type="button" href="#" class="btn button" onclick="openModal()">Nova Busca</button>
+                </center>
+            </div>
+        </div>
+    </div>
+</body>
+
+<div class="modal fade" tabindex="-1" id="newSearch">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nova Busca</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" placeholder="Goiania" id="search">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">Fechar</button>
+                <button type="button" class="btn btn-primary"
+                    onclick="openWeatherApi(document.getElementById('search').value)">Buscar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
