@@ -1,6 +1,6 @@
-const apiKey = "bd756682776b48b657e32ca1c95b87db";
+const apiKey = "";
 // Aqui vai sua APIKEY
-// 
+// Here's your APIKEY
 
 window.addEventListener('load', () => {
     navigator.geolocation.getCurrentPosition((position) => {
