@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
         latitude = Math.abs(position.coords.latitude);
         longitude = Math.abs(position.coords.longitude);
       
-        //openWeatherApiCoordinates(latitude, longitude);
+        openWeatherApiCoordinates(latitude, longitude);
       });
 });
 
