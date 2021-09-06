@@ -61,16 +61,18 @@ const openModal = () => {
 
 const openWeatherApiCoordinates = (lat, lon) => {   
 
-    const latitude = Math.abs(lat);
-    const longitude = Math.abs(lon);
-
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
 
     const title = document.getElementById('title');
     const details = document.getElementById('details');
     const otherDetails = document.getElementById('otherDetails');
 
     fetch(url).then(async (response) => {
+
+       if(response.status === 401){
+         return Swal.fire('Oooops!','Você não adicionou uma APIKEY válida!', 'warning')
+       }
+
         var contentType = response.headers.get("content-type");
         if(contentType && contentType.indexOf("application/json") !== -1) {
           const json = await response.json();
